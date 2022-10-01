@@ -5,8 +5,10 @@ import { AuthService } from './auth/auth.service';
 import { CreateUserDto } from './users/dto/create-user.dto';
 import { JwtAuthGuard } from './auth/jwt-auth.guard';
 import { User } from './users/user.decorator';
+import { ApiBearerAuth, ApiConsumes, ApiTags } from '@nestjs/swagger';
 
 @Controller()
+@ApiTags('api')
 export class AppController {
   constructor(
     private appService: AppService,
@@ -14,10 +16,12 @@ export class AppController {
   ) {}
 
   @Post('signin')
+  @ApiConsumes('application/x-www-form-urlencoded')
   async signIn(@Body() createUserDto: CreateUserDto) {
     return this.appService.signIn(createUserDto);
   }
 
+  @ApiConsumes('application/x-www-form-urlencoded')
   @UseGuards(LocalAuthGuard)
   @Post('login')
   async login(@User() user) {
@@ -25,12 +29,14 @@ export class AppController {
   }
 
   @UseGuards(JwtAuthGuard)
+  @ApiBearerAuth()
   @Post('reset')
   async reset(@User() user) {
     return this.authService.reset(user);
   }
 
   @UseGuards(JwtAuthGuard)
+  @ApiBearerAuth()
   @Post('logout')
   async logout() {
     return this.authService.logout();

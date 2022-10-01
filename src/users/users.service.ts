@@ -3,7 +3,6 @@ import { PG_CONNECTION } from '../constants';
 import { AddTagsDto } from './dto/add-tags.dto';
 import { UpdateUserDto } from './dto/update-user.dto';
 import { User } from './interfaces/users.interface';
-import _ from 'lodash';
 import { encrypt } from './secure/secure';
 
 @Injectable()
