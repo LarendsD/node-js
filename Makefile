@@ -2,7 +2,7 @@ db-migrate:
 	psql < src/migrations/migrations.sql
 
 db-migrate-deploy:
-	psql -h $(DATABASE_URL) < src/migrations/migrations.sql
+	psql -d $(DATABASE_URL) < src/migrations/migrations.sql
 
 install:
 	npm install
