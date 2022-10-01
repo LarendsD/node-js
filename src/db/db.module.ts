@@ -8,6 +8,7 @@ const dbProvider = {
     user: process.env.DATABASE_USERNAME,
     //host: process.env.DATABASE_HOST,
     //database: process.env.DATABASE_URL,
+    ssl: { rejectUnauthorized: false },
     url: process.env.DATABASE_URL,
     password: process.env.DATABASE_PASSWORD,
     port: Number(process.env.DATABASE_PORT),
