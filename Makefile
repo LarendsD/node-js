@@ -6,6 +6,7 @@ db-migrate-deploy:
 
 install:
 	npm install
+	touch .env
 
 start:
 	npm run start

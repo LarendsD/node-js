@@ -14,7 +14,12 @@ make db-migrate
 ```bash
 psql -h ваш-хост -U ваш-никнейм -d ваша-бд < src/migrations/migrations.sql
 ```
-Также необходимо 
+## db connection
+Перед запуском сервера необходимо задать переменные окружения в файле .env:
+```env
+DATABASE_PASSWORD - пароль пользователя
+DATABASE_USERNAME - имя пользователя
+```
 ## Start
 ```bash
 make start
