@@ -1,4 +1,4 @@
-# Моё <a href='https://github.com/kisilya/test-tasks/tree/main/nodeJS'>Тестовое задание</a> компании <a href='https://outsi.de/'>Outside Digital</a>
+# My <a href='https://github.com/kisilya/test-tasks/tree/main/nodeJS'>Test task</a> from <a href='https://outsi.de/'>Outside Digital</a>
 
 # Nest.js application
 
@@ -10,17 +10,17 @@ make install
 ```bash
 make db-migrate
 ```
-### Примечание!
-Данная команда выполняет миграции к пользователю, базе данных и хосту по-умолчанию!
-Если хотите вставить свои опции, то используйте следующую команду:
+### Note
+This command performs migrations to the default user, database and host!
+If you want input your options, use this command:
 ```bash
-psql -h ваш-хост -U ваш-никнейм -d ваша-бд < src/migrations/migrations.sql
+psql -h your-host -U your-nickname -d your-db < src/migrations/migrations.sql
 ```
 ## db connection
-Перед запуском сервера необходимо задать переменные окружения в файле .env:
+Before server run need set environment variables in .env file:
 ```env
-DATABASE_PASSWORD - пароль пользователя
-DATABASE_USERNAME - имя пользователя
+DATABASE_PASSWORD - user password
+DATABASE_USERNAME - user name
 ```
 ## Start
 ```bash
@@ -35,6 +35,6 @@ make start-dev
 ```
 http://localhost:3000/api/
 
-# Задеплоенное проложение доступно по следующей ссылке
+# The embedded application is available at the following link:
 
 https://node-js13.herokuapp.com/api
