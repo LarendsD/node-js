@@ -1,8 +1,10 @@
-db-migrate:
-	psql < src/migrations/migrations.sql
+setup: install db-migrate
 
-db-migrate-deploy:
-	psql -d $(DATABASE_URL) < src/migrations/migrations.sql
+db-migrate:
+	ts-node src/db/migrations/up.ts
+
+db-drop:
+	ts-node src/db/migrations/down.ts
 
 install:
 	npm install

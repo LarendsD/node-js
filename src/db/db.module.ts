@@ -1,18 +1,12 @@
 import { Module } from '@nestjs/common';
-import { Pool } from 'pg';
 import { PG_CONNECTION } from '../constants';
 import { config } from 'dotenv';
+import * as useValue from './db.config';
 
 config();
 const dbProvider = {
   provide: PG_CONNECTION,
-  useValue: new Pool({
-    user: process.env.DATABASE_USERNAME,
-    ssl: { rejectUnauthorized: false },
-    connectionString: process.env.DATABASE_URL,
-    password: process.env.DATABASE_PASSWORD,
-    port: Number(process.env.DATABASE_PORT),
-  }),
+  useValue,
 };
 
 @Module({

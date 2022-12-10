@@ -4,7 +4,7 @@
 
 ## Installation
 ```bash
-make install
+make setup
 ```
 ## db-migration
 ```bash
