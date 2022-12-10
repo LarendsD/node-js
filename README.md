@@ -6,22 +6,7 @@
 ```bash
 make setup
 ```
-## db-migration
-```bash
-make db-migrate
-```
-### Note
-This command performs migrations to the default user, database and host!
-If you want input your options, use this command:
-```bash
-psql -h your-host -U your-nickname -d your-db < src/migrations/migrations.sql
-```
-## db connection
-Before server run need set environment variables in .env file:
-```env
-DATABASE_PASSWORD - user password
-DATABASE_USERNAME - user name
-```
+
 ## Start
 ```bash
 make start
@@ -37,4 +22,16 @@ http://localhost:3000/api/
 
 # The embedded application is available at the following link:
 
-https://node-js13.herokuapp.com/api
+https://web-production-d0f5.up.railway.app/api
+
+
+# Other usefull functions
+## Start migration DB(auto with make setup):
+```bash
+make db-migrate
+```
+
+## Drop data in DB:
+```bash
+make db-drop
+```
