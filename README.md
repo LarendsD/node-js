@@ -22,8 +22,7 @@ http://localhost:3000/api/
 
 # The embedded application is available at the following link:
 
-https://web-production-d0f5.up.railway.app/api
-
+https://node-js-test-task.onrender.com/api
 
 # Other usefull functions
 ## Start migration DB(auto with make setup):
