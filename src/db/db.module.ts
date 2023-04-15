@@ -1,6 +1,6 @@
 import { Module } from '@nestjs/common';
 import { PG_CONNECTION } from '../constants';
-import * as useValue from './db.config';
+import useValue from './db.config';
 
 const dbProvider = {
   provide: PG_CONNECTION,

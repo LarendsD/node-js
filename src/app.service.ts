@@ -1,9 +1,5 @@
-import {
-  NotAcceptableException,
-  Inject,
-  Injectable,
-  CACHE_MANAGER,
-} from '@nestjs/common';
+import { NotAcceptableException, Inject, Injectable } from '@nestjs/common';
+import { CACHE_MANAGER } from '@nestjs/cache-manager';
 import { PG_CONNECTION } from './constants';
 import { CreateUserDto } from './users/dto/create-user.dto';
 import { AuthService } from './auth/auth.service';
